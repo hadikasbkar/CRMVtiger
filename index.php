@@ -22,5 +22,10 @@ include_once 'include/Webservices/Relation.php';
 include_once 'vtlib/Vtiger/Module.php';
 include_once 'includes/main/WebUI.php';
 
+
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 $webUI = new Vtiger_WebUI();
 $webUI->process(new Vtiger_Request($_REQUEST, $_REQUEST));
